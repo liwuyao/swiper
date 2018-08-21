@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>轮播图demo</title>
+	<link rel="stylesheet" type="text/css" href="swiper.css"/>
+	<style type="text/css">
+		.page-test{
+			float: left;
+			background: red;
+			opacity: 0.6;
+			width: 14px;
+			height: 14px;
+			border-radius: 50%;
+			margin: 0 5px;
+			cursor: pointer;
+		}
+		.all-test,.all-test-active{
+			float: left;
+			background: black;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			margin: 0 5px;
+			cursor: pointer;
+			position: relative;
+		}
+	    .all-test-child{
+			width: 80%;
+			height: 80%;
+			border-radius: 50%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);			
+		}
+		.all-test .all-test-child{
+			background: white;			
+		}
+		.all-test-active .all-test-child{
+			background: red;
+		}
+	</style>
+	</head>
+	<body>
+		<h3>默认样式</h3>
+		<div id="default-swiper" style="width: 700px;height: 300px;" class="swiper-box">
+			<ul class="swiper-content">
+				<li>
+					<img src="img/001.jpg"/>
+				</li>
+				<li>
+					<img src="img/002.jpg"/>
+				</li>
+				<li>
+					<img src="img/003.jpg"/>
+				</li>
+			</ul>
+	<!--		<div class="swiper-pages-box"></div>-->
+			<div class="prev">&lt;</div> <!-- 上一页 -->
+		    <div class="next">&gt;</div> <!-- 下一页 -->
+		</div>
+		<h3>修改分页小圆点class</h3>
+		<div id="class-swiper" style="width: 700px;height: 300px;" class="swiper-box">
+			<ul class="swiper-content">
+				<li>
+					<img src="img/001.jpg"/>
+				</li>
+				<li>
+					<img src="img/002.jpg"/>
+				</li>
+				<li>
+					<img src="img/003.jpg"/>
+				</li>
+			</ul>
+			<div class="swiper-pages-box"></div>
+			<div class="prev">&lt;</div> <!-- 上一页 -->
+		    <div class="next">&gt;</div> <!-- 下一页 -->
+		</div>
+		<h3>全部功能展示</h3>
+		<div id="all-swiper" style="width: 700px;height: 300px;" class="swiper-box">
+			<ul class="swiper-content">
+				<li>
+					<img src="img/001.jpg"/>
+				</li>
+				<li>
+					<img src="img/002.jpg"/>
+				</li>
+				<li>
+					<img src="img/003.jpg"/>
+				</li>
+			</ul>
+			<div class="swiper-pages-box"></div>
+			<div class="prev">&lt;</div> <!-- 上一页 -->
+		    <div class="next">&gt;</div> <!-- 下一页 -->
+		</div>
+	</body>
+	<script src="swiper.js"></script>
+	<script>
+//		默认样式
+		var defaultSwiper = new swiper({
+			name: '#default-swiper', // name 为必填
+			pageMsg:{
+				isPage:true, //如果需要分页器一定要设置成true
+			}
+		})
+//		修改小圆点class名
+		var calssSwiper = new swiper({
+			name: '#class-swiper',
+			pageMsg:{
+				isPage:true,
+				pageName: 'page-test',
+				pageWidth: 24, //小圆点的offsetWidth
+			}
+		});
+//		全部功能展示
+		var calssSwiper = new swiper({
+			name: '#all-swiper',
+			interval: 2000,
+			steep: 500,
+			pageMsg:{
+				isPage:true,
+				pageName: 'all-test',
+				pageActiveName: 'all-test-active',
+				pageWidth: 30, //小圆点的offsetWidth
+				Elm: function(){
+					var fatherElm = document.createElement('div');
+					var childElm = document.createElement('div');
+						childElm.className = 'all-test-child';
+						fatherElm.appendChild(childElm);
+					return fatherElm;
+				}
+			}
+		});
+	</script>
+</html>
