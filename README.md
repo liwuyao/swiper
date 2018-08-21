@@ -31,6 +31,7 @@ html
 最外层的id是自己设定，用来标识此轮播图。如果不需要分页器和上一页，下一页切换键，删除就行。
 
 js
+
 	var calssSwiper = new swiper({
 			name: '#all-swiper', //添加标识id,此项必填
 			interval: 2000, // 设置间隔时间，可以不填
