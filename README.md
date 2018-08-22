@@ -10,15 +10,12 @@
 
 **使用**
 安装：
+
+注：css代码自己复制swiper.css文件内容到html中
+
 一、直接下载git上的包，自己在html引用
-
-二、CND
-
-	<link rel="stylesheet" type="text/css" href="http://jscdn-1253385578.file.myqcloud.com/swiper.css"/> //css引入
-	<script type="text/javascript" src="http://jscdn-1253385578.file.myqcloud.com/swiper.js"></script> //js引入
 	
-三、npm安装（适用于vue,react)
-	<link rel="stylesheet" type="text/css" href="http://jscdn-1253385578.file.myqcloud.com/swiper.css"/> //css引入
+二、npm安装（适用于vue,react)
 	
 	npm install simple-swiper-lwy //cmd中输入
 	
