@@ -11,6 +11,7 @@
 **使用**
 安装：
 一、直接下载git上的包，自己在html引用
+
 二、CND
 
 	<link rel="stylesheet" type="text/css" href="http://jscdn-1253385578.file.myqcloud.com/swiper.css"/> //css引入
