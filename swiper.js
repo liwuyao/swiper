@@ -13,7 +13,7 @@
    	  var pageWidth;//分页器宽度;
    	  var pageName;
    	  if(options.pageMsg){
-   	  	 isPage = options.pageMsg.isPage || true; 
+   	  	 isPage = options.pageMsg.isPage || false; 
    	     pageWidth = options.pageMsg.pageWidth || 24;
    	     pageName = options.pageMsg.pageName || 'swiper-default-pages';
    	     pageActiveDef = options.pageMsg.pageActiveName || 'pageActiveDef';//小圆点默认active样式

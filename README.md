@@ -6,10 +6,22 @@
 
 **功能**
 这是一个简洁的轮播图的插件，可以修改小圆点的样式，还有轮播的间隔和速度。
-暂时不支持cmd和webpack引入
+
 
 **使用**
+安装：
+一、直接下载git上的包，自己在html引用
+二、CND
 
+	<link rel="stylesheet" type="text/css" href="http://jscdn-1253385578.file.myqcloud.com/swiper.css"/> /css
+	<script type="text/javascript" src="http://jscdn-1253385578.file.myqcloud.com/swiper.js"></script>
+	
+三、npm安装（适用于vue,react)
+	
+	npm install simple-swiper-lwy //cmd 中输入
+	
+	require('simple-swiper-lwy/swiper.js') //在需要的js文件中引入。vue，react中具体如何安装插件，请查看官方文档
+	
 html
 
 	<div id="all-swiper" style="width: 700px;height: 300px;" class="swiper-box">
